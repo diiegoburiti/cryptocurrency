@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { WatchListContext } from "../context/watchListContext";
 import coinGecko from "../api/coinGecko";
+import Coin from "./Coin";
 
 const CoinList = () => {
   const [coins, setCoins] = React.useState([]);
@@ -19,11 +20,26 @@ const CoinList = () => {
       });
       setCoins(response.data);
       setIsLoading(false);
+      console.log(response.data);
     };
     fetchData();
   }, [watchList]);
 
-  return <div>List</div>;
+  function renderCoins() {
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+
+    return (
+      <ul className="coinlist list-group mt-2">
+        {coins.map((coin) => (
+          <Coin key={coin.id} coin={coin} />
+        ))}
+      </ul>
+    );
+  }
+
+  return <div>{renderCoins()}</div>;
 };
 
 export default CoinList;
