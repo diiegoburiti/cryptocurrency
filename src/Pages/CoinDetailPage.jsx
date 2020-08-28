@@ -7,9 +7,11 @@ import coinGecko from "../api/coinGecko";
 const CoinDetailPage = () => {
   const { id } = useParams();
   const [coinDate, setCoinData] = React.useState({});
+  const [isLoading, setIsLoading] = React.useState(false);
 
   React.useEffect(() => {
     async function fetchData() {
+      setIsLoading(true);
       const [day, week, year, detail] = await Promise.all([
         coinGecko.get(`/coins/${id}/market_chart/`, {
           params: {
@@ -43,11 +45,15 @@ const CoinDetailPage = () => {
         year: year.data.prices,
         detail: detail.data,
       });
+      setIsLoading(false);
     }
     fetchData();
   }, [id]);
 
   function renderData() {
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
     return (
       <div className="coinlist">
         <HisotryChart />
