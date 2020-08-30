@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { WatchListContext } from "../context/watchListContext";
-import coinGecko from "../api/coinGecko";
+import { WatchListContext } from "../../context/watchListContext";
+import coinGecko from "../../api/coinGecko";
 import Coin from "./Coin";
 
 const CoinList = () => {

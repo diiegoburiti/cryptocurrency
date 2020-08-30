@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import HisotryChart from "../components/HistoryChart";
-import CoinData from "../components/CoinData";
+import CoinData from "../components/Coin/CoinData";
 import coinGecko from "../api/coinGecko";
 
 const CoinDetailPage = () => {
