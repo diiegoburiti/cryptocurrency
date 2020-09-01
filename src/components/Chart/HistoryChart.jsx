@@ -1,17 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Chartjs from "chart.js";
 import { historyOptions } from "./chartConfig";
 
 const HisotryChart = ({ data }) => {
   const chartRef = useRef();
   const { day, week, year, detail } = data;
-  const [timeFormat, setTimeFormat] = React.useState("24h");
+  const [timeFormat, setTimeFormat] = useState("24h");
 
   const determineTimeFormat = () => {
     switch (timeFormat) {
       case "24h":
         return day;
-      case "7d":
+      case "week":
         return week;
       case "1y":
         return year;
@@ -67,27 +67,27 @@ const HisotryChart = ({ data }) => {
       <div>{renderPrices()}</div>
       <div>
         <canvas ref={chartRef} id="myChart" width={250} height={250}></canvas>
-        <div className="chart-button mt-1">
-          <button
-            onClick={() => setTimeFormat("24")}
-            className="btn btn-outline-secondary btn-sm"
-          >
-            24h
-          </button>
-          <button
-            onClick={() => setTimeFormat("week")}
-            className="btn btn-outline-secondary btn-sm"
-          >
-            7d
-          </button>
+      </div>
+      <div className="chart-button mt-1">
+        <button
+          onClick={() => setTimeFormat("24")}
+          className="btn btn-outline-secondary btn-sm"
+        >
+          24h
+        </button>
+        <button
+          onClick={() => setTimeFormat("7d")}
+          className="btn btn-outline-secondary btn-sm"
+        >
+          7d
+        </button>
 
-          <button
-            onClick={() => setTimeFormat("1y")}
-            className="btn btn-outline-secondary btn-sm"
-          >
-            1y
-          </button>
-        </div>
+        <button
+          onClick={() => setTimeFormat("1y")}
+          className="btn btn-outline-secondary btn-sm"
+        >
+          1y
+        </button>
       </div>
     </div>
   );
