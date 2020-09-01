@@ -6,7 +6,7 @@ import coinGecko from "../api/coinGecko";
 
 const CoinDetailPage = () => {
   const { id } = useParams();
-  const [coinDate, setCoinData] = React.useState({});
+  const [coinData, setCoinData] = React.useState({});
   const [isLoading, setIsLoading] = React.useState(false);
 
   function formatData(data) {
@@ -65,8 +65,8 @@ const CoinDetailPage = () => {
     }
     return (
       <div className="coinlist">
-        <HisotryChart data={coinDate} />
-        <CoinData />
+        <HisotryChart data={coinData} />
+        <CoinData data={coinData.detail} />
       </div>
     );
   }
