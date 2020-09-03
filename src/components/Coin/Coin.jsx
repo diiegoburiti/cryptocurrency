@@ -1,25 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import style from "./Coin.module.css";
 
 const Coin = ({ coin, deleteCoin }) => {
+  console.log(coin);
   return (
     <Link to={`/coins/${coin.id}`} className="text-decoration-none my-1 coin">
-      <li className="coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-center text-dark">
-        <img className="coinlist-image" src={coin.image} alt="" />
-        <span className="text-decoration-none">{coin.current_price}</span>
+      <li className={style.coinList}>
+        <img
+          className={style.coinListImg}
+          src={coin.image}
+          alt={coin.name}
+          title={coin.name}
+        />
+        <span className={style.currentPrice}>{coin.current_price}</span>
 
         <span
           className={
-            coin.price_change_percentage_24h < 0
-              ? "text-danger mr-2"
-              : "text-success mr-2"
+            coin.price_change_percentage_24h < 0 ? style.red : style.green
           }
         >
-          {" "}
           {coin.price_change_percentage_24h < 0 ? (
-            <i className="fas fa-sort-down align-middle mr-1"></i>
+            <i className="fas fa-sort-down  "></i>
           ) : (
-            <i className="fas fa-sort-up align-middle mr-1"></i>
+            <i className="fas fa-sort-up  "></i>
           )}
           {coin.price_change_percentage_24h}
         </span>
@@ -28,7 +32,7 @@ const Coin = ({ coin, deleteCoin }) => {
             e.preventDefault();
             deleteCoin(coin.id);
           }}
-          className="delete-icon far fa-times-circle text-danger"
+          className={`${style.coinListIcon} far fa-times-circle `}
         ></i>
       </li>
     </Link>

@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import { WatchListContext } from "../../context/watchListContext";
 import coinGecko from "../../api/coinGecko";
 import Coin from "./Coin";
+import Loader from "../Helper/Loader";
+import style from "./CoinList.module.css";
 
 const CoinList = () => {
   const [coins, setCoins] = React.useState([]);
   const { watchList, deleteCoin } = useContext(WatchListContext);
   const [isLoading, setIsLoading] = React.useState(false);
 
-  console.log(watchList);
   React.useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -28,11 +29,11 @@ const CoinList = () => {
 
   function renderCoins() {
     if (isLoading) {
-      return <div>Loading...</div>;
+      return <Loader />;
     }
 
     return (
-      <ul className="coinlist list-group mt-2">
+      <ul className={style.coinList}>
         {coins.map((coin) => (
           <Coin key={coin.id} coin={coin} deleteCoin={deleteCoin} />
         ))}
