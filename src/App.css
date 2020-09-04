@@ -2,45 +2,63 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none !important;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --bg: #1c1a3f;
+  --bg-summary: #231f4a;
+  --bg-coin-list: #1d1b42;
+  --gray: #8795b7;
+  --red: #c44873;
+  --green: #46bca9;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
-  background-color: #263238;
+  background-color: var(--bg);
+  max-width: 90vw;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    max-width: 100vw;
+  }
 }
 
 ul {
   list-style: none;
 }
 
-.coinlist-image {
-  width: 50px;
-}
-
 .coinlist-item {
   display: flex;
-}
-
-.coinsummary {
-  border-color: white !important;
-  border-style: outset !important;
 }
 
 .coin-data-category {
   font-size: 10px;
 }
 
-.delete-icon {
-  display: none;
-  position: absolute;
-  right: 6px;
-}
-
 .coin:hover .delete-icon {
   display: block;
 }
-/* 
-.max {
-  max-height: 600px;
-  overflow-x: auto;
-} */
+
+.dropdown-item {
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+.dropdown-item:hover {
+  opacity: 0.5;
+}

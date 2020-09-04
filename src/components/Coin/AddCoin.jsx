@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { WatchListContext } from "../../context/watchListContext";
-
+import style from "./AddCoin.module.css";
 const AddCoin = () => {
   const [active, setActive] = useState(false);
   const { addCoin } = useContext(WatchListContext);
@@ -25,27 +25,29 @@ const AddCoin = () => {
   return (
     <div className="dropdown">
       <button
-        className="btn btn-primary dropdown-toggle"
+        className={`dropdown-toggle ${style.btn}`}
         type="button"
         onClick={() => setActive(!active)}
       >
         Add Coin
       </button>
 
-      <div className={active ? "dropdown-menu show" : "dropdown-menu"}>
+      <ul className={active ? "dropdown-menu show" : "dropdown-menu"}>
         {availableCoins.map((coin) => {
           return (
-            <a
-              onClick={() => handleClick(coin)}
-              key={coin}
-              href="#"
-              className="dropdown-item"
-            >
-              {coin}
-            </a>
+            <li>
+              <span
+                onClick={() => handleClick(coin)}
+                key={coin}
+                href="#"
+                className="dropdown-item"
+              >
+                {coin}
+              </span>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 };

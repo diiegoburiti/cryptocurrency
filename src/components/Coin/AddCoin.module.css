@@ -1,0 +1,20 @@
+.btn {
+  border: none;
+  padding: 0.775rem 1.3rem;
+  background-color: var(--gray);
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--white);
+}
+
+.dropdown ul li {
+  background-color: var(--gray);
+  cursor: pointer;
+}
+
+.dropdownItem {
+}

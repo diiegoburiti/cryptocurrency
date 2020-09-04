@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import HisotryChart from "../components/Chart/HistoryChart";
 import CoinData from "../components/Coin/CoinData";
 import coinGecko from "../api/coinGecko";
+import Loader from "../components/Helper/Loader";
 
 const CoinDetailPage = () => {
   const { id } = useParams();
@@ -61,7 +62,7 @@ const CoinDetailPage = () => {
 
   function renderData() {
     if (isLoading) {
-      return <div>Loading...</div>;
+      return <Loader />;
     }
     return (
       <div className="coinlist">

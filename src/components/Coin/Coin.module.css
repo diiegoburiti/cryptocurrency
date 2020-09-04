@@ -15,6 +15,18 @@
   color: var(--red);
 }
 
+@media (min-width: 1400px) {
+  .coinListIcon {
+    right: 13%;
+  }
+}
+
+@media (max-width: 770px) {
+  .coinListIcon {
+    right: 9%;
+  }
+}
+
 .currentPrice {
   font-size: 1rem;
   color: var(--gray);
@@ -40,4 +52,13 @@
 .green {
   color: var(--green);
   margin-right: 2rem;
+}
+
+@media (min-width: 1040px) {
+  body {
+    background-color: var(--bg);
+    max-width: 80vw;
+    max-height: 100vh;
+    background-color: #fff;
+  }
 }
