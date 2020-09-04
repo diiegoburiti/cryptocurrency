@@ -1,10 +1,11 @@
 import React from "react";
+import style from "./CoinData.module.css";
 
 const CoinData = ({ data }) => {
   const renderData = () => {
     if (data) {
       return (
-        <div className="bg-white mt-3 p-2 rounded border row">
+        <div className={style.coinData}>
           <div className="col-sm">
             <div className="d-flex flex-column">
               <span className="text-muted coin-data-category">Market Cap</span>

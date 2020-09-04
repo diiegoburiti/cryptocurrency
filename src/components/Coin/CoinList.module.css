@@ -1,4 +1,9 @@
 .coinList {
   display: block;
   margin: 1rem 0;
+  transition: 0.5 ease;
+}
+
+.coinList li:hover {
+  background: rgba(0, 0, 0, 0.2);
 }

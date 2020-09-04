@@ -1,0 +1,6 @@
+.coinData {
+  background: var(--bg-summary);
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
