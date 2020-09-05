@@ -2,4 +2,5 @@
   padding: 1rem;
   border-radius: 8px;
   background: var(--bg-summary);
+  box-shadow: var(--shadow);
 }

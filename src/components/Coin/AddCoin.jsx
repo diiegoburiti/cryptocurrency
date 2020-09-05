@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { WatchListContext } from "../../context/watchListContext";
-import style from "./AddCoin.module.css";
 import Button from "../Helper/Button";
+
 const AddCoin = () => {
   const [active, setActive] = useState(false);
   const { addCoin } = useContext(WatchListContext);
@@ -26,7 +26,7 @@ const AddCoin = () => {
   return (
     <div className="dropdown">
       <Button
-        className={`dropdown-toggle ${style.btn}`}
+        className={"dropdown-toggle"}
         type="button"
         onClick={() => setActive(!active)}
       >

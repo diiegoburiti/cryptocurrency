@@ -5,47 +5,43 @@ const CoinData = ({ data }) => {
   const renderData = () => {
     if (data) {
       return (
-        <div className={style.coinData}>
-          <div className="col-sm">
-            <div className="d-flex flex-column">
-              <span className="text-muted coin-data-category">Market Cap</span>
+        <section className={style.coinData}>
+          <div>
+            <div className={style.info}>
+              <span>Market Cap: </span>
               <span>{data.market_cap}</span>
             </div>
             <hr />
-            <div className="d-flex flex-column">
-              <span className="text-muted coin-data-category">
-                Total Supply
-              </span>
+            <div className={style.info}>
+              <span>Total Supply: </span>
               <span>{data.total_supply}</span>
             </div>
           </div>
 
-          <div className="col-sm">
-            <div className="d-flex flex-column">
-              <span className="text-muted coin-data-category">Volume(24H)</span>
+          <div>
+            <div className={style.info}>
+              <span>Volume(24H): </span>
               <span>{data.total_volume}</span>
             </div>
             <hr />
-            <div className="d-flex flex-column">
-              <span className="text-muted coin-data-category">high 24h</span>
+            <div className={style.info}>
+              <span>high 24h: </span>
               <span>{data.high_24h}</span>
             </div>
           </div>
 
-          <div className="col-sm">
-            <div className="d-flex flex-column">
-              <span className="text-muted coin-data-category">
-                Circulating Supply
-              </span>
+          <div className="">
+            <div className={style.info}>
+              <span>Circulating Supply: </span>
               <span>{data.circulating_supply}</span>
             </div>
             <hr />
-            <div className="d-flex flex-column">
-              <span className="text-muted coin-data-category">low 24h</span>
+            <div className={style.info}>
+              <span>low 24h: </span>
               <span>{data.low_24h}</span>
             </div>
           </div>
-        </div>
+        </section>
       );
     }
   };

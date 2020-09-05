@@ -5,13 +5,14 @@
   font-size: 1rem;
   border-radius: 8px;
   transition: 0.3s ease;
+  box-shadow: var(--shadow-btn);
+}
+
+.btn:nth-child(2) {
+  margin-left: 0.875rem;
+  margin-right: 0.875rem;
 }
 
 .btn:hover {
-  background-color: var(--white);
-}
-
-.dropdown ul li {
-  background-color: var(--gray);
-  cursor: pointer;
+  background: var(--white);
 }

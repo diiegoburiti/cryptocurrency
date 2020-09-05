@@ -1,7 +1,7 @@
 export const historyOptions = {
   lineHeightAnnotation: {
     always: true,
-    hover: false,
+    hover: true,
     lineWeight: 1.5,
   },
 

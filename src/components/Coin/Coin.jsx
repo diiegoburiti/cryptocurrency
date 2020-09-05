@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import style from "./Coin.module.css";
 
 const Coin = ({ coin, deleteCoin }) => {
-  console.log(coin);
   return (
     <Link to={`/coins/${coin.id}`} className="text-decoration-none my-1 coin">
       <li className={style.coinList}>

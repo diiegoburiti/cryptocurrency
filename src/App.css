@@ -13,6 +13,9 @@
   --gray: #8795b7;
   --red: #c44873;
   --green: #46bca9;
+  --shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+  --shadow-btn: 0 2px 3px 0 rgba(0, 0, 0, 0.4);
+  --shadow-coin: 0 2px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
 a {
@@ -30,6 +33,7 @@ body {
   max-width: 80vw;
   max-height: 100vh;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
