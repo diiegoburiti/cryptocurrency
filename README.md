@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>CriptoCoins</h1>
 
-## Available Scripts
+<p align="center">
+<a href="#about-memo">About</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+<a href="#tecnologies-rocket">Tecnologies</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+<a href="#how-to-contribute-">How to Contribute</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+<a href="#license-scroll">License</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+</p>
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+<p align="center">
+<image src="https://img.shields.io/badge/-HTML-red"/>
+<image src="https://img.shields.io/badge/-CSS-blue"/>
+<image src="https://img.shields.io/badge/-JAVASCRIPT-yellow"/>
+<image src="https://img.shields.io/badge/-REACT-blue"/>
+<image src="https://img.shields.io/badge/-Chart.js-yellow"/>
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## CriptoCoins :sparkles:
 
-### `yarn test`
+### Home
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+<image src="./src/assets/home-app.png" />
+</p>
 
-### `yarn build`
+### Coin Page
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+<image src="./src/assets/coin-page.png" />
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## About :memo:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is a project that shows the current price of crypto
+currencies like bitcoin, ethereum
+and others.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The prices are obtained via API from: [CoinGecko](https://www.coingecko.com/pt/api) and shown in the chart using the library Chart.js.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tecnologies :rocket:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- HTML
+- CSS MODULES
+- REACT
+- Chart JS
+- Bootstrap
+- Font Awesome Icons
 
-## Learn More
+## How to Contribute 🤔
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: my new feature'`;
+- Push to your branch: `git push origin my-feature`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License :scroll:
 
-### Code Splitting
+> This project is under the MIT license. See the archive [LICENSE](LICENSE) for more details.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+##### Made by Diego Buriti :wave:
