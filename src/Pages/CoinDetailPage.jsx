@@ -1,9 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import HisotryChart from "../components/Chart/HistoryChart";
 import CoinData from "../components/Coin/CoinData";
 import coinGecko from "../api/coinGecko";
 import Loader from "../components/Helper/Loader";
+import Button from "../components/Helper/Button";
 
 const CoinDetailPage = () => {
   const { id } = useParams();
@@ -66,6 +67,9 @@ const CoinDetailPage = () => {
     }
     return (
       <div className="coinlist">
+        <Link to="/">
+          <Button>Back</Button>
+        </Link>
         <HisotryChart data={coinData} />
         <CoinData data={coinData.detail} />
       </div>
